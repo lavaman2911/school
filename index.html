@@ -3,41 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Raadsel</title>
+  <title>Raadsel – Kerst</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #4c9ce0, #2b6cb0);
+      background: linear-gradient(135deg, #2d6a4f, #d00000); /* groen naar rood */
       color: #ffffff;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
-      padding: 20px;
+      overflow: hidden;
     }
     .container {
       background-color: rgba(255, 255, 255, 0.1);
       padding: 30px;
-      border-radius: 12px;
+      border-radius: 15px;
       max-width: 600px;
       text-align: center;
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      position: relative;
+      z-index: 1;
     }
     h1 {
-      font-size: 28px;
+      font-size: 30px;
       margin-bottom: 20px;
-      color: #e0f2ff;
+      color: #ffeb99;
+      text-shadow: 2px 2px 5px #000;
     }
     p {
       font-size: 20px;
       line-height: 1.6;
     }
+    /* Kerstballen animatie */
+    .ball {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: float 6s infinite ease-in-out;
+    }
+    @keyframes float {
+      0% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-30px) scale(1.1); }
+      100% { transform: translateY(0) scale(1); }
+    }
   </style>
 </head>
 <body>
+  <!-- Kerstballen -->
+  <div class="ball" style="width:30px;height:30px;background:red;top:10%;left:15%;animation-delay:0s;"></div>
+  <div class="ball" style="width:25px;height:25px;background:green;top:20%;left:70%;animation-delay:1s;"></div>
+  <div class="ball" style="width:20px;height:20px;background:red;top:50%;left:40%;animation-delay:2s;"></div>
+  <div class="ball" style="width:35px;height:35px;background:green;top:75%;left:25%;animation-delay:3s;"></div>
+  <div class="ball" style="width:28px;height:28px;background:red;top:80%;left:80%;animation-delay:4s;"></div>
+
   <div class="container">
-    <h1>Raadsel</h1>
+    <h1>🎄 Raadsel Kerst 🎄</h1>
     <p>Ik ben een getal.<br>
     Als je mij door 2 deelt, krijg je 5,5.<br>
     Als je mij optelt bij 1, krijg je een dozijn.<br><br>
