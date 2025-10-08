@@ -17,6 +17,7 @@
     );
     color: #ffffff;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -44,6 +45,14 @@
     font-size: 20px;
     line-height: 1.6;
   }
+
+  .hidden-number {
+    position: absolute;
+    bottom: 8px;
+    left: 15px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.2); /* subtiel zichtbaar */
+  }
 </style>
 </head>
 <body>
@@ -54,5 +63,7 @@
     Als je mij optelt bij 1, krijg je een dozijn.<br><br>
     Welk getal ben ik?</p>
   </div>
+
+  <div class="hidden-number">20</div>
 </body>
 </html>
